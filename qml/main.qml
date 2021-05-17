@@ -1,10 +1,11 @@
 import QtQuick 2.15
 import QtQuick.Window 2.15
 import QtQuick.Controls 2.15
+import QtGraphicalEffects 1.15
 import "controls"
 
 Window {
-    id: window
+    id: mainWindow
     width: 1000
     height: 580
     visible: true
@@ -105,6 +106,12 @@ Window {
                     anchors.rightMargin: 105
                     anchors.leftMargin: 0
                     anchors.topMargin: 0
+
+                    DragHandler {
+                        onActiveChanged: if (active) {
+                                            mainWindow.startSystemMove()
+                                         }
+                    }
 
                     Image {
                         id: iconApp
@@ -293,5 +300,16 @@ Window {
             }
 
         }
+    }
+
+    DropShadow {
+        anchors.fill: bg
+        horizontalOffset: 0
+        verticalOffset: 0
+        radius: 18
+        samples: 16
+        color: "#80000000"
+        source: bg
+        z: 0
     }
 }
