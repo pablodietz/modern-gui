@@ -44,7 +44,7 @@ Window {
                 anchors.rightMargin: 0
                 anchors.leftMargin: 0
                 anchors.topMargin: 0
-/*
+                /*
                 Button {
                     id: toggleBtn
                     width: 70
@@ -210,20 +210,53 @@ Window {
                         anchors.bottomMargin: 0
                         anchors.topMargin: 0
 
-                        Button {
-                            id: button
-                            text: qsTr("Button")
+                        LeftMenuButton {
+                            id: homeBtn
+                            width: leftMenu.width
+                            text: qsTr("Home")
+                            isActiveMenu: true
+                            btnIconSource: "../images/svg/home-icon.svg"
                         }
+
+                        LeftMenuButton {
+                            id: openBtn
+                            width: leftMenu.width
+                            text: qsTr("Open")
+                            isActiveMenu: false
+                            btnIconSource: "../images/svg/open-icon.svg"
+                        }
+
+                        LeftMenuButton {
+                            id: saveBtn
+                            width: leftMenu.width
+                            text: qsTr("Save")
+                            isActiveMenu: false
+                            btnIconSource: "../images/svg/save-icon.svg"
+                        }
+                    }
+
+                    LeftMenuButton {
+                        id: settingsBtn
+                        x: 0
+                        y: 180
+                        width: leftMenu.width
+                        text: qsTr("Settings")
+                        anchors.bottom: parent.bottom
+                        btnIconSource: "../images/svg/settings-icon.svg"
+                        anchors.bottomMargin: 25
+                        isActiveMenu: false
                     }
                 }
 
                 Rectangle {
                     id: contentPages
+                    visible: true
                     color: "#2e2f30"
                     anchors.left: leftMenu.right
                     anchors.right: parent.right
                     anchors.top: parent.top
                     anchors.bottom: parent.bottom
+                    clip: true
                     anchors.topMargin: 0
                     anchors.rightMargin: 0
                     anchors.leftMargin: 0
