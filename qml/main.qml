@@ -1,6 +1,7 @@
-import QtQuick 2.14
-import QtQuick.Window 2.14
+import QtQuick 2.15
+import QtQuick.Window 2.15
 import QtQuick.Controls 2.15
+import "controls"
 
 Window {
     id: window
@@ -43,14 +44,20 @@ Window {
                 anchors.rightMargin: 0
                 anchors.leftMargin: 0
                 anchors.topMargin: 0
-
+/*
                 Button {
                     id: toggleBtn
-                    x: 0
-                    y: 0
                     width: 70
                     height: 60
                     text: qsTr("Toggle")
+                    anchors.left: parent.left
+                    anchors.top: parent.top
+                    anchors.topMargin: 0
+                    anchors.leftMargin: 0
+                }
+*/
+                ToggleButton {
+                    id: toggleBtn
                 }
 
                 Rectangle {
@@ -115,7 +122,7 @@ Window {
                         height: 35
                         anchors.verticalCenter: parent.verticalCenter
                         anchors.left: parent.left
-                        source: "qrc:/qtquickplugin/images/template_image.png"
+                        source: "../images/svg/app-top-icon.svg"
                         anchors.leftMargin: 5
                         fillMode: Image.PreserveAspectFit
                     }
@@ -147,25 +154,25 @@ Window {
                     anchors.bottomMargin: 0
                     anchors.topMargin: 0
 
-                    Button {
-                        id: button1
-                        width: 35
-                        height: 35
-                        text: qsTr("Button")
+                    TopBarButton {
+                        id: minimizeBtn
+                        btnColorDefault: "#1f1f1f"
                     }
 
-                    Button {
-                        id: button2
-                        width: 35
-                        height: 35
-                        text: qsTr("Button")
+                    TopBarButton {
+                        id: maximizeBtn
+                        visible: true
+                        btnIconSource: "../images/svg/maximize-icon.svg"
                     }
 
-                    Button {
-                        id: button3
-                        width: 35
-                        height: 35
-                        text: qsTr("Button")
+                    TopBarButton {
+                        id: closeBtn
+                        visible: true
+                        btnColorClicked: "#ff2f47"
+                        btnColorMouseOver: "#b62233"
+                        btnColorDefault: "#1f1f1f"
+                        clip: false
+                        btnIconSource: "../images/svg/close-icon.svg"
                     }
                 }
             }
@@ -184,6 +191,7 @@ Window {
                     id: leftMenu
                     width: 70
                     color: "#1f1f1f"
+                    border.color: "#00000000"
                     anchors.left: parent.left
                     anchors.top: parent.top
                     anchors.bottom: parent.bottom
@@ -235,7 +243,7 @@ Window {
                     anchors.topMargin: 0
 
                     Label {
-                        id: labelTopInfo1
+                        id: labelBottomInfo
                         color: "#b4b4b4"
                         text: qsTr("Application description")
                         anchors.left: parent.left

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE QtCreatorProject>
-<!-- Written by QtCreator 4.15.0, 2021-05-14T22:07:24. -->
+<!-- Written by QtCreator 4.15.0, 2021-05-16T19:36:59. -->
 <qtcreator>
  <data>
   <variable>EnvironmentId</variable>
@@ -88,18 +88,16 @@
    <valuemap type="QVariantMap" key="CppEditor.QuickFix">
     <value type="bool" key="UseGlobalSettings">true</value>
    </valuemap>
-   <valuelist type="QVariantList" key="ProjectExplorer.Project.Environment">
-    <value type="QString">QT_OPENGL=desktop</value>
-   </valuelist>
+   <valuelist type="QVariantList" key="ProjectExplorer.Project.Environment"/>
   </valuemap>
  </data>
  <data>
   <variable>ProjectExplorer.Project.Target.0</variable>
   <valuemap type="QVariantMap">
    <value type="QString" key="DeviceType">Desktop</value>
-   <value type="QString" key="ProjectExplorer.ProjectConfiguration.DefaultDisplayName">Replacement for &quot;Desktop Qt 6.1.0 MinGW 64-bit&quot;</value>
-   <value type="QString" key="ProjectExplorer.ProjectConfiguration.DisplayName">Replacement for &quot;Desktop Qt 6.1.0 MinGW 64-bit&quot;</value>
-   <value type="QString" key="ProjectExplorer.ProjectConfiguration.Id">qt.qt6.610.win64_mingw81_kit</value>
+   <value type="QString" key="ProjectExplorer.ProjectConfiguration.DefaultDisplayName">Desktop Qt 5.15.2 MinGW 64-bit</value>
+   <value type="QString" key="ProjectExplorer.ProjectConfiguration.DisplayName">Desktop Qt 5.15.2 MinGW 64-bit</value>
+   <value type="QString" key="ProjectExplorer.ProjectConfiguration.Id">qt.qt5.5152.win64_mingw81_kit</value>
    <value type="int" key="ProjectExplorer.Target.ActiveBuildConfiguration">-1</value>
    <value type="int" key="ProjectExplorer.Target.ActiveDeployConfiguration">0</value>
    <value type="int" key="ProjectExplorer.Target.ActiveRunConfiguration">0</value>
@@ -181,16 +179,16 @@
     <valuelist type="QVariantList" key="CustomOutputParsers"/>
     <value type="int" key="PE.EnvironmentAspect.Base">2</value>
     <valuelist type="QVariantList" key="PE.EnvironmentAspect.Changes"/>
-    <value type="QString" key="ProjectExplorer.ProjectConfiguration.DisplayName">C:/Users/pablo/Workspace/QtQuickGUI/main.py</value>
-    <value type="QString" key="ProjectExplorer.ProjectConfiguration.Id">PythonEditor.RunConfiguration.C:/Users/pablo/Workspace/QtQuickGUI/main.py</value>
-    <value type="QString" key="ProjectExplorer.RunConfiguration.BuildKey">C:/Users/pablo/Workspace/QtQuickGUI/main.py</value>
+    <value type="QString" key="ProjectExplorer.ProjectConfiguration.DisplayName">C:/Users/pablo/Workspace/modern-gui/main.py</value>
+    <value type="QString" key="ProjectExplorer.ProjectConfiguration.Id">PythonEditor.RunConfiguration.C:/Users/pablo/Workspace/modern-gui/main.py</value>
+    <value type="QString" key="ProjectExplorer.RunConfiguration.BuildKey">C:/Users/pablo/Workspace/modern-gui/main.py</value>
     <value type="QString" key="PythonEditor.RunConfiguation.Interpreter">{6368ac26-e6ff-4075-b2a3-2d4ff5d20d91}</value>
-    <value type="QString" key="PythonEditor.RunConfiguation.Script">C:\Users\pablo\Workspace\QtQuickGUI\main.py</value>
-    <value type="bool" key="RunConfiguration.UseCppDebugger">true</value>
-    <value type="bool" key="RunConfiguration.UseCppDebuggerAuto">false</value>
+    <value type="QString" key="PythonEditor.RunConfiguation.Script">C:\Users\pablo\Workspace\modern-gui\main.py</value>
+    <value type="bool" key="RunConfiguration.UseCppDebugger">false</value>
+    <value type="bool" key="RunConfiguration.UseCppDebuggerAuto">true</value>
     <value type="bool" key="RunConfiguration.UseQmlDebugger">false</value>
     <value type="bool" key="RunConfiguration.UseQmlDebuggerAuto">true</value>
-    <value type="QString" key="RunConfiguration.WorkingDirectory.default">C:/Users/pablo/Workspace/QtQuickGUI</value>
+    <value type="QString" key="RunConfiguration.WorkingDirectory.default">C:/Users/pablo/Workspace/modern-gui</value>
    </valuemap>
    <value type="int" key="ProjectExplorer.Target.RunConfigurationCount">1</value>
   </valuemap>
