@@ -13,7 +13,7 @@ Button {
     property int iconWidth: 18
     property int iconHeight: 18
     property color activeMenuColor: "#55aaff"
-    property color activeMenuColorRight: "#2c313c"
+    property color activeMenuColorRight: "#2e2f30"
     property bool isActiveMenu: false
 
     QtObject {

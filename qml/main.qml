@@ -10,6 +10,7 @@ Window {
     visible: true
     color: "#00000000"
     title: qsTr("Hello World")
+    flags: Qt.Window | Qt.FramelessWindowHint
 
     Rectangle {
         id: bg
@@ -44,20 +45,10 @@ Window {
                 anchors.rightMargin: 0
                 anchors.leftMargin: 0
                 anchors.topMargin: 0
-                /*
-                Button {
-                    id: toggleBtn
-                    width: 70
-                    height: 60
-                    text: qsTr("Toggle")
-                    anchors.left: parent.left
-                    anchors.top: parent.top
-                    anchors.topMargin: 0
-                    anchors.leftMargin: 0
-                }
-*/
+
                 ToggleButton {
                     id: toggleBtn
+                    onClicked: animationMenu.running = true
                 }
 
                 Rectangle {
@@ -117,9 +108,8 @@ Window {
 
                     Image {
                         id: iconApp
-                        y: 5
-                        width: 28
-                        height: 35
+                        width: 22
+                        height: 22
                         anchors.verticalCenter: parent.verticalCenter
                         anchors.left: parent.left
                         source: "../images/svg/app-top-icon.svg"
@@ -198,6 +188,15 @@ Window {
                     anchors.bottomMargin: 0
                     anchors.leftMargin: 0
                     anchors.topMargin: 0
+
+                    PropertyAnimation {
+                        id: animationMenu
+                        target: leftMenu
+                        property: "width"
+                        to: if(leftMenu.width == 70) return 200; else return 70
+                        duration: 500
+                        easing.type: Easing.OutBounce
+                    }
 
                     Column {
                         id: column
