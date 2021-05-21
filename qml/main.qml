@@ -284,6 +284,11 @@ Window {
                             text: qsTr("Home")
                             isActiveMenu: true
                             btnIconSource: "../images/svg/home-icon.svg"
+                            onClicked: {
+                                homeBtn.isActiveMenu = true
+                                settingsBtn.isActiveMenu = false
+                                stackView.push(Qt.resolvedUrl("pages/HomePage.qml"))
+                            }
                         }
 
                         LeftMenuButton {
@@ -305,14 +310,16 @@ Window {
 
                     LeftMenuButton {
                         id: settingsBtn
-                        x: 0
-                        y: 180
                         width: leftMenu.width
                         text: qsTr("Settings")
                         anchors.bottom: parent.bottom
                         btnIconSource: "../images/svg/settings-icon.svg"
                         anchors.bottomMargin: 25
-                        isActiveMenu: false
+                        onClicked: {
+                            homeBtn.isActiveMenu = false
+                            settingsBtn.isActiveMenu = true
+                            stackView.push(Qt.resolvedUrl("pages/SettingsPage.qml"))
+                        }
                     }
                 }
 
@@ -329,6 +336,12 @@ Window {
                     anchors.rightMargin: 0
                     anchors.leftMargin: 0
                     anchors.bottomMargin: 25
+
+                    StackView {
+                        id: stackView
+                        anchors.fill: parent
+                        initialItem: Qt.resolvedUrl("pages/HomePage.qml")
+                    }
                 }
 
                 Rectangle {
@@ -472,6 +485,6 @@ Window {
 
 /*##^##
 Designer {
-    D{i:0;formeditorZoom:0.9}D{i:29}D{i:32}D{i:36}
+    D{i:0;formeditorZoom:0.9}
 }
 ##^##*/
